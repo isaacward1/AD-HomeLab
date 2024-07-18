@@ -4,7 +4,7 @@ Server NIC config
 1. VMware network adapters setup
 - Setup Windows Server 2019 with 2 Network Adapters (One custom-host-only and one NAT)
 
-![cool](Images/Screenshot from 2024-07-15 02-23-55.png)
+![cool](Images/screenshot1.png)
 
 
 
