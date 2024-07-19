@@ -1,7 +1,24 @@
-Active Directory
+<h1> Active Directory Home Lab Tutorial </h1>
 
-Server NIC config
-1. VMware network adapters setup
+<h3>Summary:<br></h3> 
+This guide walks you through the steps to set up a simple Active Directory environment w/ Domain Services, a DHCP server, DNS server, and via VMware virtual machines
+<br><br>
+
+<h3>Prerequisites:<br></h3>
+This lab will assume that you have the following resources:
+
+- VMware Workstation
+- [Windows Server 2019 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
+- [Windows 11 ISO](https://www.microsoft.com/software-download/windows11)
+- Account Creation Script
+<h1></h1>
+
+<h3>Walkthrough<br></h3>
+1. Virtual Machine Install and Configuration<br>
+In VMware Workstation, In VMware Workstation, In VMware Workstation, In VMware Workstation, In VMware Workstation, In VMware Workstation, 
+
+1. Server Network Interface Setup
+VMware network adapters setup
 - Setup Windows Server 2019 with 2 Network Adapters (One custom-host-only and one NAT)
 
 ![cool](Images/screenshot1.png)
