@@ -1,76 +1,35 @@
-<h1> Active Directory Home Lab Tutorial </h1>
-
-<h3>Summary:<br></h3> 
-This guide walks you through the steps to set up a simple Active Directory environment w/ Domain Services, a DHCP server, DNS server, and via VMware virtual machines
-<br><br>
-
-<h3>Prerequisites:<br></h3>
-This lab will assume that you have the following resources:
+<h1>Prerequisites:</h1>
+<br>
 
 - VMware Workstation
 - [Windows Server 2019 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
-- [Windows 11 ISO](https://www.microsoft.com/software-download/windows11)
-- Account Creation Script
-<h1></h1>
+- [Windows 10 ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
+<br>
 
-<h3>Walkthrough<br></h3>
-1. Virtual Machine Install and Configuration<br>
-In VMware Workstation, In VMware Workstation, In VMware Workstation, In VMware Workstation, In VMware Workstation, In VMware Workstation, 
+<h1>Walkthrough:</h1>
+<br>
 
-1. Server Network Interface Setup
-VMware network adapters setup
-- Setup Windows Server 2019 with 2 Network Adapters (One custom-host-only and one NAT)
+<h3>1. Create a private Server-Client network for VMs</h3>
 
-![cool](Images/screenshot1.png)
+- Virtual Network Editor > Add Network > Network name: vmnet2, Type: Host-only > Add
+- Select vmnet2 > Subnet IP: 172.16.0.0, Mask: 255.255.255.0 > Save
+<br>
 
+<h3>2. Windows Server 2019 VM Setup</h3>
 
+- New Virtual Machine > Select "I will install operating system later." > MS Windows, Windows Server 2019 > Choose a name and location > Disk Size: 30GB > Customize Hardware > Add > Network Adapter
+- Select "Network Adapter 2" > Custom > vmnet2
+- Select "CD/DVD (SATA)" > Use ISO image > Select the Windows Server 2019 ISO file > Close > Finish
+- Start VM > Choose "Windows Server 2019 (Desktop Experience)" > Type of installation: Custom
+- Download/Extract the zip file to the Desktop
 
+<br>
 
-2. Configure Unidentified Adapter
-- Change adapter settings > unidentified network properties > IPv4 > 172.16.0.2/24 and DNS of loopback
+<h3>3. Windows Client 10/11 VM Setup</h3>
 
-3. Installing AD Domain Services
-- Server Manager > Add Roles and Features > Server Roles (AD Domain Services) > Install
-
-4. Finish Setup of AD DS
-- AD DS Configuration > new forest > root domain name ("mydomain.com") > setup password > Install
-
-5. Create an administrative account account
-- Windows Admin Tools > Users and Comps > OU ("Admins_List") > New User (username: "a-jtitor") > Password ("Password1") > uncheck must change pass, check never expires > finish
-
-Give admin privs to newly created user:
-- Admins_List > john titor > properties > member of > Add > Domain Admins > Sign out
-
-6. Install Remote Access Services for clients to access internet while connected to company domain
-- Server manager > add roles/features > Remote Access > Roles service: RAS and Routing > Install
-
-7. Configure RAS (NAT)
-- Server manager > Tools > routing and remote access > (local) > configure (NAT) and enable
-- select the internet interface > finish
-
-8. Install/Config DHCP Server Role
-- Server Manager > Add roles > Server roles > DHCP server > Install
-- Tools > DHCP > IPv4 > new scope ("172.16.0.100-200) > Length = 24 > next a bunch of times > finish
-- Router = 172.16.0.2
-- Authorize and refresh DHCP server
-
-8b. Allow internet to be browsed by server
-- Server manager > unselect ie thing
-
-9. PowerShell Add users to AD
-
-
-
-Client Side
-** windows home cannot join domain, pro or enterprise needed
-** Disable/Enable NICs after every network change
-
-1. Configure NIC to use 172.16.0.2 as DNS and Default gateway
-2. ping google.com to check for access to the internet and DNS
-
-
-
-
-
-
+- New Virtual Machine > Select "I will install operating system later." > MS Windows, Windows Server 2019 > Choose a name and location > Disk Size: 30GB > Customize Hardware > Add > Network Adapter
+- Select "Network Adapter 2" > Custom > vmnet2 > Close > Finish
+- Select Windows Pro or Enterprise version during install
+- Download/Extract the zip file to the Desktop
+<br>
 
