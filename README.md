@@ -16,17 +16,18 @@ to facilitate the Domain Services deployment process as well as role configurati
 <h4>Creating a private network for the virtual machines </h4>  
 
 1. In VMware Workstation, navigate to Virtual Network Editor via the "Edit" tab
-2. Add Network > Network name: vmnet2, Type: Host-only > Add
-3. Select vmnet2 > Subnet IP: 172.16.0.0, Mask: 255.255.255.0 > Save
+2. Add Network >> Network name: vmnet2, Type: Host-only >> Add
+3. Select vmnet2 >> Subnet IP: 172.16.0.0, Subnet mask: 255.255.255.0 >> Save
 <br>
 
 <h4>Windows Server 2019 VM Setup </h4>
 
-- New Virtual Machine > Select "I will install operating system later." > MS Windows, Windows Server 2019 > Choose a name and location > Disk Size: 30GB > Customize Hardware > Add > Network Adapter
-- Select "Network Adapter 2" > Custom > vmnet2
-- Select "CD/DVD (SATA)" > Use ISO image > Select the Windows Server 2019 ISO file > Close > Finish
-- Start VM > Choose "Windows Server 2019 (Desktop Experience)" > Type of installation: Custom
-- Download/Extract the zip file to the Desktop
+1. Home >> New Virtual Machine >> Typical >> Select  >> OS: MS Windows, Version: Windows Server 2019 >>
+Choose a name and location >> Disk Size: 30GB >> Finish
+2. Library >> Select the newly created VM >> Edit virtual machine settings >> Add >> Network Adapter >> Select "Network Adapter 2" >> Network Connection: Custom >> vmnet2 >> Select "CD/DVD (SATA)" >> Use ISO image >> Select the Windows Server 2019 ISO file >> Save
+3. Start VM >> Choose "Windows Server Standard Eval 2019 (Desktop Experience)" >> Custom Install
+4. Go through the installation process
+5. Via USB, Download/Extract the zip file to the Desktop
 
 - As Administrator, run the following commands in PowerShell
 
