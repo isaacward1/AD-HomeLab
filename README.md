@@ -1,4 +1,4 @@
-<h1>Active Directory Virtual Home Lab</h1>
+<h1>Active Directory Home Lab</h1>
 A guide on how to setup a basic Active Directory client-server environment with VMware Workstation. In this repository, I've included some PowerShell scripts 
 to facilitate the Domain Services deployment process as well as role configuration.
 <br><br>
