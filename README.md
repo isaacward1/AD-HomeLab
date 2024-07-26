@@ -37,11 +37,11 @@ Choose a name and location >> Disk Size: 30GB >> Finish
 
          Set-ExecutionPolicy RemoteSigned
          
-         $env:userprofile\Desktop\Auto-AD\Setup.ps1
+         $env:userprofile\Desktop\AD-HomeLab-main\AD-HomeLab-main\Setup.ps1
          
-         $env:userprofile\Desktop\Auto-AD\ADDS.ps1
+         $env:userprofile\Desktop\AD-HomeLab-main\AD-HomeLab-main\ADDS.ps1
 
-         $env:userprofile\Desktop\Auto-AD\DHCP.ps1
+         $env:userprofile\Desktop\AD-HomeLab-main\AD-HomeLab-main\DHCP.ps1
    
 8. To configure the RRAS/NAT Server Role follow these steps: Server Manager >> Tools >> Routing and Remote Access >> Left click the (local) server >> Configure and Enable RRAS >> Network Address Translation (NAT) >> Select the network interface with DHCP enabled (Sometimes no interfaces may appear, close and reopen the Setup Wizard) >> Finish
 <br>
