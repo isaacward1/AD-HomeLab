@@ -37,9 +37,12 @@ Choose a name and location >> Disk Size: 30GB >> Finish
 
          Set-ExecutionPolicy RemoteSigned
          
-         $env:userprofile\Desktop\Auto-ADDS\Stage1.ps1
+         $env:userprofile\Desktop\Auto-AD\Setup.ps1
          
-         $env:userprofile\Desktop\Auto-ADDS\Stage2.ps1
+         $env:userprofile\Desktop\Auto-AD\ADDS.ps1
+
+         $env:userprofile\Desktop\Auto-AD\DHCP.ps1
+8. To configure the RRAS Server Role follow the listed steps
 <br>
 
 <h4>Windows 10 Client VM Setup </h4>
