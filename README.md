@@ -42,7 +42,4 @@ to facilitate the Domain Services deployment process as well as role configurati
 - Select "Network Adapter 2" > Custom > vmnet2 > Close > Finish
 - Select Windows Pro or Enterprise version during install
 - Download/Extract the zip file to the Desktop
-<br>
-
-<h4> 4. Running scripts on Server </h4>
 
