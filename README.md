@@ -31,7 +31,7 @@ Choose a name and location >> Disk Size: 30GB >> Finish
 4. Go through the installation process
 5. After the install, navigate to the Server Manaer >> "Configure this local server" >> IE Enhanced Security Configuration >> Admins: Off, Users: Off
    * This allows for a direct download of the repo zip file to the VM. Alternatively, the zip file can be transferred to the VM via USB.
-6. Then navigate to Internet Explorer >> Search `https://github.com/isaacward1/AD-DS/archive/refs/heads/main.zip` >> Save and Extract to the Desktop
+6. Then navigate to Internet Explorer >> Search `https://github.com/isaacward1/AD-HomeLab/archive/refs/heads/main.zip` >> Save and Extract to the Desktop
 
 7. After extraction of the zip file to the Desktop, run the following commands in PowerShell. Note that the Server Machine will restart multiple times. After each restart, navigate back to PowerShell and run the next script.
 
@@ -42,7 +42,9 @@ Choose a name and location >> Disk Size: 30GB >> Finish
          $env:userprofile\Desktop\Auto-AD\ADDS.ps1
 
          $env:userprofile\Desktop\Auto-AD\DHCP.ps1
+   
 8. To configure the RRAS Server Role follow the listed steps
+   
 <br>
 
 <h4>Windows 10 Client VM Setup </h4>
