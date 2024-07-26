@@ -24,29 +24,28 @@ to facilitate the Domain Services deployment process as well as role configurati
 
 <h4>Windows Server 2019 VM Setup </h4>
 
-1. Home >> New Virtual Machine >> Typical >> Select  >> OS: MS Windows, Version: Windows Server 2019 >>
+1. VMware Home >> New Virtual Machine >> Typical >> Select "I will install operating system later." >> OS: MS Windows, Version: Windows Server 2019 >>
 Choose a name and location >> Disk Size: 30GB >> Finish
 2. Library >> Select the newly created VM >> "Edit virtual machine settings" >> Add >> Network Adapter >> Select "Network Adapter 2" >> Network Connection: Custom >> vmnet2 >> Select "CD/DVD (SATA)" >> Use ISO image >> Select the Windows Server 2019 ISO file >> Save
 3. Start VM >> Choose "Windows Server Standard Eval 2019 (Desktop Experience)" >> Custom Install
 4. Go through the installation process
-   
 5. After the install, navigate to the Server Manaer >> "Configure this local server" >> IE Enhanced Security Configuration >> Admins: Off, Users: Off
-6. Then navigate to Internet Explorer
-   Via USB, Download/Extract the zip file to the Desktop
+   * This allows for a direct download of the repo zip file to the VM. Alternatively, the zip file can be transferred to the VM via USB.
+6. Then navigate to Internet Explorer >> Search `https://github.com/isaacward1/AD-DS/archive/refs/heads/main.zip` >> Save and Extract to the Desktop
 
-- As Administrator, run the following commands in PowerShell
+7. After extraction of the zip file to the Desktop, run the following commands in PowerShell. Note that the Server Machine will restart multiple times. After each restart, navigate back to PowerShell and run the next script.
 
-      Set-ExecutionPolicy RemoteSigned
-      
-      $env:userprofile\Desktop\Auto-ADDS\Stage1.ps1
-      
-      $env:userprofile\Desktop\Auto-ADDS\Stage2.ps1
+         Set-ExecutionPolicy RemoteSigned
+         
+         $env:userprofile\Desktop\Auto-ADDS\Stage1.ps1
+         
+         $env:userprofile\Desktop\Auto-ADDS\Stage2.ps1
 <br>
 
 <h4>Windows 10 Client VM Setup </h4>
 
-- New Virtual Machine > Select "I will install operating system later." > MS Windows, Windows Server 2019 > Choose a name and location > Disk Size: 30GB > Customize Hardware > Add > Network Adapter
-- Select "Network Adapter 2" > Custom > vmnet2 > Close > Finish
-- Select Windows Pro or Enterprise version during install
-- Download/Extract the zip file to the Desktop
+1. VMware Home >> New Virtual Machine >> Typical >> Select "I will install operating system later."  >> OS: MS Windows, Version: Windows 10 x64 >> Choose a name and location >> Disk Size: 40GB >> Customize Hardware >> Select "Network Adapter" >> Custom >> vmnet2 >> Close >> Finish
+2. Start VM >> Choose "Windows 10 Pro" >> Custom Install
+ 
+3. Go through the installation process
 
