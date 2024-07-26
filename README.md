@@ -13,13 +13,14 @@ to facilitate the Domain Services deployment process as well as role configurati
 
 <h2>Walkthrough:</h2>
 
-<h4> 1. Creating a private network for the virtual machines </h4>  
+<h4>Creating a private network for the virtual machines </h4>  
 
-- Virtual Network Editor > Add Network > Network name: vmnet2, Type: Host-only > Add
-- Select vmnet2 > Subnet IP: 172.16.0.0, Mask: 255.255.255.0 > Save
+1. In VMware Workstation, navigate to Virtual Network Editor via the "Edit" tab
+2. Add Network > Network name: vmnet2, Type: Host-only > Add
+3. Select vmnet2 > Subnet IP: 172.16.0.0, Mask: 255.255.255.0 > Save
 <br>
 
-<h4> 2. Windows Server 2019 VM Setup </h4>
+<h4>Windows Server 2019 VM Setup </h4>
 
 - New Virtual Machine > Select "I will install operating system later." > MS Windows, Windows Server 2019 > Choose a name and location > Disk Size: 30GB > Customize Hardware > Add > Network Adapter
 - Select "Network Adapter 2" > Custom > vmnet2
@@ -36,7 +37,7 @@ to facilitate the Domain Services deployment process as well as role configurati
       $env:userprofile\Desktop\Auto-ADDS\Stage2.ps1
 <br>
 
-<h4> 3. Windows Client 10/11 VM Setup </h4>
+<h4>Windows 10 Client VM Setup </h4>
 
 - New Virtual Machine > Select "I will install operating system later." > MS Windows, Windows Server 2019 > Choose a name and location > Disk Size: 30GB > Customize Hardware > Add > Network Adapter
 - Select "Network Adapter 2" > Custom > vmnet2 > Close > Finish
