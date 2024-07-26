@@ -1,5 +1,5 @@
 <h1>Active Directory Home Lab</h1>
-A guide on how to setup a basic Active Directory client-server environment with VMware Workstation. In this repository, I've included some PowerShell scripts 
+A simple guide on how to setup a basic Active Directory client-server environment with VMware Workstation. In this repository, I've included some PowerShell scripts 
 to facilitate the Domain Services deployment process as well as role configuration.
 <br><br>
 
@@ -26,7 +26,7 @@ to facilitate the Domain Services deployment process as well as role configurati
 
 1. VMware Home >> New Virtual Machine >> Typical >> Select "I will install operating system later." >> OS: MS Windows, Version: Windows Server 2019 >>
 Choose a name and location >> Disk Size: 30GB >> Finish
-2. Library >> Select the newly created VM >> "Edit virtual machine settings" >> Add >> Network Adapter >> Select "Network Adapter 2" >> Network Connection: Custom >> vmnet2 >> Select "CD/DVD (SATA)" >> Use ISO image >> Select the Windows Server 2019 ISO file >> Save
+2. VMware Library >> Select the newly created VM >> "Edit virtual machine settings" >> Add >> Network Adapter >> Select "Network Adapter 2" >> Network Connection: Custom >> vmnet2 >> Select "CD/DVD (SATA)" >> Use ISO image >> Select the Windows Server 2019 ISO file >> Save
 3. Start VM >> Choose "Windows Server Standard Eval 2019 (Desktop Experience)" >> Custom Install
 4. Go through the installation process
 5. After the install, navigate to the Server Manaer >> "Configure this local server" >> IE Enhanced Security Configuration >> Admins: Off, Users: Off
@@ -43,8 +43,7 @@ Choose a name and location >> Disk Size: 30GB >> Finish
 
          $env:userprofile\Desktop\Auto-AD\DHCP.ps1
    
-8. To configure the RRAS Server Role follow the listed steps
-   
+8. To configure the RRAS/NAT Server Role follow these steps: Server Manager >> Tools >> Routing and Remote Access >> Left click the (local) server >> Configure and Enable RRAS >> Network Address Translation (NAT) >> Select the network interface with DHCP enabled (Sometimes no interfaces may appear, close and reopen the Setup Wizard) >> Finish
 <br>
 
 <h4>Windows 10 Client VM Setup </h4>
