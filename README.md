@@ -51,5 +51,6 @@ Choose a name and location >> Disk Size: 30GB >> Finish
 1. VMware Home >> New Virtual Machine >> Typical >> Select "I will install operating system later."  >> OS: MS Windows, Version: Windows 10 x64 >> Choose a name and location >> Disk Size: 40GB >> Customize Hardware >> Select "Network Adapter" >> Custom >> vmnet2 >> Close >> Finish
 2. Start VM >> Choose "Windows 10 Pro" >> Custom Install
  
-3. Go through the installation process
+3. Go through the installation process.
+4. To test that DNS, DHCP, and NAT functions of the server are working properly, `ping google.com`.
 
