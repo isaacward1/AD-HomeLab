@@ -1,6 +1,6 @@
 <h1>Active Directory Home Lab</h1>
 A quick tutorial on how to setup a basic Active Directory environment with VMware Workstation. This guide provides brief instructions 
-for setting up the server components necessary for a client-server connection. This repository contains PowerShell scripts 
+for setting up the server components necessary for a client-DC connection. This repository contains PowerShell scripts 
 to speed up the Domain Services deployment and role configuration processes.
 <br><br>
 
