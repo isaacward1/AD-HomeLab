@@ -1,5 +1,5 @@
 <h1>Active Directory Home Lab</h1>
-A quick tutorial on how to set up a basic Active Directory Domain Controller (DC) environment with VMware Workstation. This repository contains PowerShell scripts to speed up the Domain Services deployment and role configuration processes.
+A short tutorial on how to set up a basic Active Directory Domain Controller (DC) environment with VMware Workstation. This repository contains PowerShell scripts to speed up the Domain Services deployment and role configuration processes.
 <br><br>
 
 
