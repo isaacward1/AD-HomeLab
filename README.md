@@ -1,13 +1,11 @@
 <h1>Active Directory Home Lab</h1>
-A quick tutorial on how to setup a basic Active Directory environment with VMware Workstation. This guide provides brief instructions 
-for setting up the server components necessary for a client-DC connection. This repository contains PowerShell scripts 
-to speed up the Domain Services deployment and role configuration processes.
+A quick tutorial on how to set up a basic Active Directory Domain Controller (DC) environment with VMware Workstation. This repository contains PowerShell scripts to speed up the Domain Services deployment and role configuration processes.
 <br><br>
 
 
 <h2>Prerequisites:</h2>
 
-- VMware Workstation 17 Pro
+- [VMware Workstation 17 Pro](https://support.broadcom.com/group/ecx/productdownloads?subfamily=VMware%20Workstation%20Pro)
 - [Windows Server 2019 ISO](https://www.microsoft.com/en-us/evalcenter/download-windows-server-2019)
 - [Windows 10 ISO](https://www.microsoft.com/en-us/software-download/windows10ISO)
 <br><br>
@@ -18,7 +16,6 @@ to speed up the Domain Services deployment and role configuration processes.
 
 1. In VMware Workstation, navigate to Virtual Network Editor via the "Edit" tab
 2. Add Network  >  Network name: vmnet2, Type: Host-only  >  Add
-   
 3. Select vmnet2  >  Subnet IP: 172.16.0.0, Subnet mask: 255.255.255.0  >  Save
 
 <br>
@@ -44,7 +41,10 @@ Choose a name and location  >  Disk Size: 30GB  >  Finish
 
          $env:userprofile\Desktop\AD-HomeLab-main\AD-HomeLab-main\DHCP.ps1
    
-8. To configure the RRAS/NAT Server Role follow these steps: Server Manager  >  Tools  >  Routing and Remote Access  >  Left click the (local) server  >  Configure and Enable RRAS  >  Network Address Translation (NAT)  >  Select the network interface with DHCP enabled (Sometimes no interfaces may appear, close and reopen the Setup Wizard)  >  Finish
+8. Unfortunately, there is no way to automate the configuration of the RRAS/NAT Server Role. To implement it, follow these steps:
+
+   Server Manager  >  Tools >  Routing and Remote Access  >  Left click the (local) server > Configure and Enable RRAS  >  Network Address Translation (NAT) > Select the network interface with DHCP enabled (Note: Sometimes no interfaces may appear, close and reopen the Setup Wizard) > Finish
+
 <br>
 
 <h4>Windows 10 Client VM Setup </h4>
@@ -53,5 +53,5 @@ Choose a name and location  >  Disk Size: 30GB  >  Finish
 2. Start VM  >  Choose "Windows 10 Pro"  >  Custom Install
  
 3. Go through the installation process.
-4. To test that DNS, DHCP, and NAT functions of the server are working properly, `ping google.com`.
+4. To test that DNS, DHCP, and NAT functions of the server are working properly: `ping google.com`.
 
